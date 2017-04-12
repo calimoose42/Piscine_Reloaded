@@ -6,7 +6,7 @@
 /*   By: arohani <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 12:52:08 by arohani           #+#    #+#             */
-/*   Updated: 2017/04/12 13:07:54 by arohani          ###   ########.fr       */
+/*   Updated: 2017/04/12 14:14:04 by arohani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int		ft_count_if(char **tab, int (*f)(char*))
 
 	i = 0;
 	result = 0;
-	while (tab[i][0] != '0')
+	while (tab[i] != 0)
 	{
-		if (f(tab[i]) == 1)
+		if ((*f)(tab[i]) == 1)
 			result++;
 		i++;
 	}
